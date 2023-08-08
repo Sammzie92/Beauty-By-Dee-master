@@ -12,8 +12,8 @@ const BottomTab = ({activeScreen}) => {
       <View className='rounded-xl px-4 py-3 w-full flex-row items-center justify-around bg-[#555]'
       
       >
-        <TouchableOpacity>
-        <FontAwesome5 name="user-alt" size={32} color="black" />
+        <TouchableOpacity onPress={() => navigation.navigate("UserScreen")}>
+        <FontAwesome5 name="user-alt" size={32} color={activeScreen === "UserScreen" ? "#FFA23A" : "black"} />
         </TouchableOpacity>
         <TouchableOpacity>
         <FontAwesome name="list-ul" size={32} color="black" />
