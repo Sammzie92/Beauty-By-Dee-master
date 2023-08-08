@@ -3,10 +3,14 @@ import React from 'react'
 import { AntDesign, Entypo, Feather, FontAwesome5, Foundation, Ionicons, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons'
 import { iconColor, pressIcons } from '../colors'
 import { useNavigation } from '@react-navigation/native'
+import { useFonts } from 'expo-font';
+
+
 
 
 const UserScreen = () => {
-  const navigation = useNavigation()
+
+const navigation = useNavigation()
   return (
     <SafeAreaView className='flex-1 bg-white'>
     <View className='flex-row mt-5 items-center justify-between w-full px-4 py-2'>
@@ -59,30 +63,33 @@ const UserScreen = () => {
           <Text className='text-lg font-extrabold text-[#2c5978] tracking-wide'>Your Favorites</Text>
         </TouchableOpacity>
    
-        <TouchableOpacity className='flex-row mt-2 space-x-8 items-center'>
+        <TouchableOpacity className='flex-row mt-3 space-x-8 items-center'>
         <MaterialCommunityIcons name="wallet-outline" size={35} color='#4493ca' /> 
               <Text className='text-lg font-extrabold text-[#2c5978] tracking-wide'>Payments</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity className='flex-row mt-2 space-x-6 items-center'>
+        <TouchableOpacity className='flex-row mt-3 space-x-6 items-center'>
         <Feather name="users" size={40} color='#4493ca' />  
                <Text className='text-lg font-extrabold text-[#2c5978] tracking-wide'>Tell Your Friend</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity className='flex-row mt-2 space-x-6 items-center'>
+        <TouchableOpacity className='flex-row mt-3 space-x-6 items-center'>
           <Entypo name="price-tag" size={40} color='#4493ca' />
                <Text className='text-lg font-extrabold text-[#2c5978] tracking-wide'>Promotions</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity className='flex-row mt-2 space-x-6 items-center'>
+        <TouchableOpacity className='flex-row mt-3 space-x-6 items-center'>
         <Ionicons name="settings-outline" size={40} color='#4493ca' />   
             <Text className='text-lg font-extrabold text-[#2c5978] tracking-wide'>Settings</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity className='flex-row mt-2 space-x-6 items-center'>
-        <AntDesign name="logout" size={35} color="red" />
-              <Text className='text-lg text-red-500 font-bold font-serif tracking-wide'>Log-Out</Text>
-        </TouchableOpacity>
+        <View className=' border-t-2 border-[#a0aab1] mt-4'>
+          <TouchableOpacity className='flex-row mt-2 space-x-6 items-center '>
+                    <AntDesign name="logout" size={35} color="red" className='mt-8' />
+              <Text className='text-lg text-red-500 font-bold tracking-wide'>Log-Out</Text>
+          </TouchableOpacity>
+
+        </View>
 
     </View>
   </SafeAreaView>
